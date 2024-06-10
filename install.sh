@@ -81,7 +81,7 @@ pip3 install requests
 cd ..	
 
 printf "${CYAN}Cloning SecretFinder\n${NORMAL}"
-git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
+git clone https://github.com/m4ll0k/SecretFinder.git
 cd secretfinder
 pip install -r requirements.txt
 cd ..
@@ -90,13 +90,6 @@ printf "${CYAN}Cloning CMSeek\n${NORMAL}"
 git clone https://github.com/Tuhinshubhra/CMSeeK
 cd CMSeeK
 pip3 install -r requirements.txt
-cd ..
-
-printf "${CYAN}Cloning Findomain\n${NORMAL}"
-git clone https://github.com/findomain/findomain.git
-cd findomain
-cargo build --release
-sudo cp target/release/findomain /usr/bin/
 cd ..
 
 printf "${CYAN}Cloning anti-burl\n${NORMAL}"
@@ -138,15 +131,15 @@ printf "${CYAN}Installing SqlMap\n\n${NORMAL}"
 sudo apt-get install sqlmap 
 
 printf "${CYAN}Installing Amass\n${NORMAL}"
-go get -v github.com/OWASP/Amass/v3/..
+go install -v github.com/OWASP/Amass/v3/..@latest
 sudo cp ~/go/bin/amass /usr/local/bin 
 
 printf "${CYAN}Installing Aquatone\n${NORMAL}"
-go get -u github.com/michenriksen/aquatone
+go install -u github.com/michenriksen/aquatone
 sudo cp ~/go/bin/aquatone /usr/local/bin 
 
 printf "${CYAN}Installing Subfinder\n${NORMAL}"
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 sudo cp ~/go/bin/subfinder /usr/local/bin 
 
 printf "${CYAN}Installing Hakrawler\n${NORMAL}"
@@ -154,19 +147,19 @@ go install github.com/hakluke/hakrawler@latest
 sudo cp ~/go/bin/hakrawler /usr/local/bin 
 
 printf "${CYAN}Installing anew\n${NORMAL}"
-go get -u github.com/tomnomnom/anew
+go install -u github.com/tomnomnom/anew@latest
 sudo cp ~/go/bin/anew /usr/local/bin 
 
 printf "${CYAN}Installing HTTPX\n${NORMAL}"
-GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+GO111MODULE=on go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 sudo cp ~/go/bin/httpx /usr/local/bin
 
 printf "${CYAN}Installing Notify\n${NORMAL}"
-GO111MODULE=on go get -v github.com/projectdiscovery/notify/cmd/notify
+GO111MODULE=on go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 sudo cp ~/go/bin/notify /usr/local/bin
 
 printf "${CYAN}Installing Nuclei\n${NORMAL}"
-GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 sudo cp ~/go/bin/nuclei /usr/local/bin
 
 printf "${CYAN}Installing Shcheck\n${NORMAL}"
@@ -175,31 +168,27 @@ git clone https://github.com/santoru/shcheck
 printf "${CYAN}Installing MailSpoof\n${NORMAL}"
 sudo pip3 install mailspoof
 
-printf "${CYAN}Installing MailSpoof\n${NORMAL}"
-go get github.com/haccer/subjack
-sudo cp ~/go/bin/subjack /usr/local/bin
-
 printf "${CYAN}Installing gau\n${NORMAL}"
-GO111MODULE=on go get -u -v github.com/lc/gau
+GO111MODULE=on go install -u -v github.com/lc/gau@latest
 sudo cp ~/go/bin/gau /usr/local/bin
 
 printf "${CYAN}Installing gf\n${NORMAL}"
-go get -u github.com/tomnomnom/gf
+go install -u github.com/tomnomnom/gf@latest
 echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc
 cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf
 sudo cp ~/go/bin/gf /usr/local/bin
 
 printf "${CYAN}Installing qsreplace\n${NORMAL}"
-go get -u github.com/tomnomnom/qsreplace
+go install -u github.com/tomnomnom/qsreplace@latest
 sudo cp ~/go/bin/qsreplace /usr/local/bin
 
 printf "${CYAN}Installing Dalfox\n${NORMAL}"
-GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+GO111MODULE=on go install -v github.com/hahwul/dalfox/v2@latest
 sudo cp ~/go/bin/dalfox /usr/local/bin
 
 printf "${CYAN}Installing html-tool\n${NORMAL}"
-go get -u github.com/tomnomnom/hacks/html-tool
+go install -u github.com/tomnomnom/hacks/html-tool@latest
 sudo cp ~/go/bin/html-tool /usr/local/bin
 
 printf "${CYAN}Installing waybackurls\n${NORMAL}"
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
